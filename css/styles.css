@@ -1,3 +1,11 @@
+/*Custom properties*/
+:root{
+    --white: #ffffff; 
+    --dark: #212121;
+    --primary: #ffc107;
+    --secundary: #0097a7;
+    --grey: #757575;
+}
 html{
     font-size: 62.5%;
 }
@@ -10,4 +18,7 @@ body{
 }
 .titulo span{
     font-size: 2rem;
+}
+.main-navigation{
+    background-color: var(--secundary);
 }
