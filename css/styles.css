@@ -22,3 +22,29 @@ body{
 .main-navigation{
     background-color: var(--secundary);
 }
+.contenedor{
+    width: 120rem;
+    margin: 0 auto; 
+}
+.nav-bg{
+    background-color: var(--secundary);
+}
+
+.main-navigation{
+    padding: 1rem;
+    display: flex;
+    /*el justify content es para filas
+    existe otro que es el aling-items es para las colimnas (flex-direction)*/
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: bold; /*Negritas en css*/
+}
+.main-navigation a{
+    color: var(--white);
+    text-decoration: none;
+}
+.main-navigation a:hover{
+    background-color: var(--primary);
+    color: var(--dark);
+    
+}
