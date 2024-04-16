@@ -45,6 +45,5 @@ body{
 }
 .main-navigation a:hover{
     background-color: var(--primary);
-    color: var(--dark);
-    
+    color: var(--dark);   
 }
