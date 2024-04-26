@@ -8,13 +8,28 @@
 }
 html{
     font-size: 62.5%;
+    /*Hack para box model*/
+    box-sizing: border-box;
+}
+/*Hack para box model*/
+*,*::before,*::after{
+    box-sizing: inherit;
 }
 body{
     font-size: 16px;
 }
-.titulo{
-    text-align: center;
+/*Tipografia*/
+h1{
     font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center;
 }
 .titulo span{
     font-size: 2rem;
@@ -23,7 +38,7 @@ body{
     background-color: var(--secundary);
 }
 .contenedor{
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto; 
 }
 .nav-bg{
@@ -32,6 +47,8 @@ body{
 
 .main-navigation{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     /*el justify content es para filas
     existe otro que es el aling-items es para las columnas (flex-direction)*/
     justify-content: space-between;
@@ -39,6 +56,13 @@ body{
     font-weight: bold; /*Negritas en css*/
 
 }
+@media (min-width: 768px){
+    .main-navigation{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  
 .main-navigation a{
     padding: 1rem;
     color: var(--white);
@@ -55,17 +79,46 @@ body{
     768px para tablets
     1140px para laptops
     1400 para dispositivos mas grandes o tvs
+    tienen un formato conocido como llave/valor o key/value
 */
-body{
-    background-color: beige;
+.hero{
+    /*
+        El uso de ../ significa que se regresas un nivel en el directorio.
+    */
+    background-image: url(../image/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative; /*para manipular la posición, el padre siempre debe ser relativo*/
+
 }
-@media(min-width:480px){
-    body{
-        background-color: blue;
-    }
+.contenedor-hero {
+    position: absolute;
+    background-color: rgba(0,0,0, .7);
+    width: 100%;
+    height: 100%;
+    /*alinear vertical y horizontal*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-@media(min-width:768px){
-    body{
-        background-color: cornflowerblue;
-    }
+.contenedor-hero p,.contenedor-hero h2{
+    color: var(--white);
+}
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+.boton{
+    background-color: var(--secundary);
+    color: var(--white);
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold; 
+    border-radius: .5rem; /*Esquinas redondeadas*/
+    width: 90%;
+    text-align: center;
 }
