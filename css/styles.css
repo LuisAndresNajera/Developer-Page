@@ -132,22 +132,60 @@ h1,h2,h3{
     }
 }
 
-.sombra{
-margin-top: 2rem;
-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
-/*Motor para google chrome*/
--webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
-/*Motor para mozilla firefox*/
--moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
-background-color: var(--white);
-padding: 2rem;
-border-radius: 1rem;
+.sombra {
+    margin-top: 2rem;
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    /*Motor para google chrome*/
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    /*Motor para mozilla firefox*/
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
 }
 /*
-Pendientes Clade Viernes 03/05/2024
-acomodaremos la seccion mis servicios usando flexbox
+Pendientes Clase Viernes 03/05/2024
 que es blur: es desenfoque
 que es box shadow: es para difuminar el dondo
 que es box model: es la estructura para acomodar los contenedores
 en que pagina generamos los box shadowws: Css generator
 */
+/*---Servicios---*/
+@media (min-width: 768px){
+  .servicios {
+    display: grid;
+   /*
+   Alternativa sencilla 
+   grid-template-columns: 1fr 1fr 1fr;
+   */
+   /*
+   Alternativa porcentajes
+   grid-template-columns: 33.3% 33.3% 33.3%;
+   */
+   grid-template-columns: repeat(3, 1fr); /* El primer valor es para decir cuantas veces se repite y el segundo el tamaño*/
+  }
+  .servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Ajustar color y peso de la letra del h3*/
+  .servicio h3{
+    color:var(--secundary);
+    font-weight: normal;
+  }
+  .servicios p{
+    text-align: center;
+    /* Interlineado */
+    line-height: 2;
+  }
+  .servicios .iconos {
+    width: 15rem;
+    height: 15rem;
+    background-color: var(--primary);
+    border-radius: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
