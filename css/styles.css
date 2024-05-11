@@ -207,7 +207,7 @@ en que pagina generamos los box shadowws: Css generator
   font-weight: bold;
   margin-bottom: 2rem;
   text-transform: uppercase;
-  color: var(--primario);
+  color: var(--primary);
 }
 
 @media (min-width: 768px){
@@ -234,7 +234,7 @@ en que pagina generamos los box shadowws: Css generator
   border-radius: .5rem;
 }
 .campo textarea{
-  height: 20rem;
+  height: 17rem;
 }
 .w-sm-100{
   width: 100%;
