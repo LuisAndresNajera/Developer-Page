@@ -254,7 +254,7 @@ en que pagina generamos los box shadowws: Css generator
 .footer{
   text-align: center;
 }
-
+/* Este apartado fue idea de Roger-Maldonado, me gusto la idea asi que lo implemente de igual manera creditos a: https://github.com/RogersMLCH */
 @media (max-width: 768px) {
   .servicio .iconos {
     display: flex;
